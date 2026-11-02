@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kalkulator Gauss-Jordan</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Kalkulator</h1>
+        <p>Kalkulator Metode Eliminasi Gauss-Jordan</p>
+    </header>
+
+    <main>
+        
+<section class="welcome">
+
+    <h2>Kalkulator Gauss-Jordan</h2>
+
+    <p>
+        Pilih ukuran matriks yang ingin kamu gunakan.
+    </p>
+
+    <div class="input-group">
+
+        <label for="ukuran">Ukuran Matriks:</label>
+
+        <select id="ukuran">
+            <option value="2">2 × 2</option>
+            <option value="3" selected>3 × 3</option>
+            <option value="4">4 × 4</option>
+            <option value="5">5 × 5</option>
+        </select>
+
+    </div>
+
+    <button onclick="buatMatriks()">
+        Buat Matriks
+    </button>
+
+    <div id="matriks-container"></div>
+    <button onclick="hitungMatriks()">
+    Hitung Gauss-Jordan
+</button>
+
+<div id="hasil-container"></div>
+
+</section>
+
+    </main>
+
+<script src="script.js"></script>    
+</body>
+</html>

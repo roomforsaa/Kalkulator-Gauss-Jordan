@@ -1,0 +1,369 @@
+
+/* =========================
+   1. IMPORT FONT MINECRAFT
+========================= */
+
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+/* =========================
+   2. RESET DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   3. BODY
+========================= */
+
+body {
+    font-family: 'Minecraft', monospace;
+    background-color: #252525;
+    color: #eeeeee;
+    min-height: 100vh;
+}
+
+/* =========================
+   4. HEADER
+========================= */
+
+header {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 5px solid #171717;
+}
+
+
+/* =========================
+   5. MAIN
+========================= */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+/* =========================
+   6. WELCOME CARD
+========================= */
+
+.welcome {
+    background-color: #3b3b3b;
+    width: 100%;
+    max-width: 750px;
+    padding: 50px 35px;
+    text-align: center;
+
+    border: 4px solid #171717;
+    box-shadow: 8px 8px 0px #111111;
+}
+
+.welcome h2 {
+    font-size: 19px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px #171717;
+}
+
+.welcome p {
+    font-size: 11px;
+    line-height: 2.5;
+    color: #d0d0d0;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   7. BUTTON
+========================= */
+
+button {
+    font-family: inherit;
+    background-color: #777777;
+    color: white;
+
+    border: 3px solid #171717;
+    padding: 16px 25px;
+
+    font-size: 11px;
+    cursor: pointer;
+
+    box-shadow: 4px 4px 0px #111111;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: #999999;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #111111;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* =========================
+   8. RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header p {
+        font-size: 9px;
+    }
+
+    .welcome {
+        padding: 35px 20px;
+    }
+
+    .welcome h2 {
+        font-size: 15px;
+    }
+
+    .welcome p {
+        font-size: 9px;
+    }
+
+    button {
+        font-size: 9px;
+    }
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: #eeeeee;
+}
+
+select {
+    font-family: inherit;
+    font-size: 11px;
+    padding: 12px;
+    background-color: #555555;
+    color: white;
+    border: 3px solid #171717;
+    cursor: pointer;
+}
+
+/* =========================
+   CONTAINER MATRIKS
+========================= */
+
+#matriks-container {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.matriks {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.matriks input {
+    width: 65px;
+    padding: 10px 5px;
+    background-color: #555555;
+    color: white;
+    border: 2px solid #171717;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.matriks input:focus {
+    outline: 2px solid #aaaaaa;
+}
+
+/* =========================
+   HASIL PERHITUNGAN
+========================= */
+
+#hasil-container {
+    margin-top: 35px;
+    color: white;
+    overflow-x: auto;
+}
+
+#hasil-container h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+#hasil-container table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#hasil-container td {
+    background-color: #555555;
+    border: 2px solid #171717;
+    padding: 12px;
+    min-width: 55px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+/* Kartu setiap langkah Gauss-Jordan */
+.kartu-langkah {
+    background-color: #353535;
+    border: 3px solid #777777;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 4px 4px 0 #171717;
+}
+
+/* Judul langkah */
+.kartu-langkah h4 {
+    color: #eeeeee;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Tabel matriks */
+.tabel-matriks {
+    border-collapse: collapse;
+    margin: 10px auto;
+    color: #ffffff;
+}
+
+/* Isi tabel */
+.tabel-matriks td {
+    border: 1px solid #888888;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 35px;
+}
+
+/* Garis pemisah matriks dan konstanta */
+.tabel-matriks .kolom-konstanta {
+    border-left: 3px solid #eeeeee;
+}
+
+/* Efek saat kursor diarahkan ke kartu */
+.kartu-langkah:hover {
+    background-color: #404040;
+}
+
+/* Tampilan kesimpulan solusi */
+.bagian-kesimpulan {
+    background-color: #353535;
+    border: 3px solid #777777;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 4px 4px 0 #171717;
+}
+
+.kesimpulan h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.kesimpulan p {
+    display: inline-block;
+    background-color: #252525;
+    border: 2px solid #888888;
+    padding: 10px 18px;
+    margin: 8px;
+    font-size: 16px;
+    color: #ffffff;
+}
+/* Tampilan khusus tabel hasil akhir */
+.tabel-hasil {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 20px auto;
+}
+
+
+.tabel-hasil td {
+    padding: 15px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* Panel hasil akhir */
+.bagian-hasil {
+    background-color: #353535;
+    border: 3px solid #888888;
+    padding: 20px;
+    margin-top: 35px;
+    box-shadow: 4px 4px 0 #171717;
+}
+
+/* Judul hasil akhir */
+.bagian-hasil > h3 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+/* Matriks hasil akhir */
+.bagian-hasil .tabel-hasil {
+    margin: 20px auto;
+    background-color: #252525;
+}
+
+.bagian-hasil .tabel-hasil td {
+    padding: 12px 20px;
+    font-size: 17px;
+    color: #ffffff;
+}
+/* Jarak antara langkah-langkah dan hasil akhir */
+.bagian-hasil {
+    margin-top: 35px;
+}
+
+/* Jarak antara hasil akhir dan kesimpulan */
+.bagian-kesimpulan {
+    margin-top: 30px;
+}
+
+/* Jarak judul dengan isi */
+.bagian-hasil h3,
+.bagian-kesimpulan h3 {
+    margin-bottom: 20px;
+}
+.judul-langkah {
+    background-color: #252525;
+    color: #ffffff;
+    border: 3px solid #777777;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 0 #171717;
+}
+/* Memperbesar tulisan header */
+header h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 17px;
+}
